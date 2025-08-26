@@ -21,6 +21,6 @@ jobs:
 
     name: download python and project
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+    - run: python wf.py
