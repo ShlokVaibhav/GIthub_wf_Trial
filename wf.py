@@ -16,7 +16,7 @@ folders = [f for f in os.listdir(cwd) if os.path.isdir(os.path.join(cwd, f))]
 print(folders)
 
 repo = Repo(".")
-physlean_path = os.path.join(repo.working_tree_dir, "GIthub_wf_Trial")
+physlean_path = repo.working_tree_dir
 folders = [name for name in os.listdir(physlean_path) if os.path.isdir(os.path.join(physlean_path, name))]
 folder_map = {folder: idx + 1 for idx, folder in enumerate(folders)}
 print(folder_map)
